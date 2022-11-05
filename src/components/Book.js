@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Book = () => {
+const Book = () => { //eslint-disable-line
+
   return (
     <div className="book">
       <div className="sectionOne">
         <div className="bookDetails">
-          <p className="bookGenre"></p>
+          <p className="bookGenre">Sci-Fi</p>
           <h3 className="bookName">Solomon</h3>
-          <p className="bookAuthor"></p>
+          <p className="bookAuthor">Solly</p>
         </div>
         <ul className="buttons">
           <li className="button">Comments</li>
@@ -16,7 +17,7 @@ const Book = () => {
         </ul>
       </div>
       <div className="sectionTwo">
-        <i className="fa-regular"></i>
+        <i className="fa-regular" />
         <div className="progress">
           <h3 className="percentage">70%</h3>
           <p className="completed">Completed</p>
@@ -24,11 +25,11 @@ const Book = () => {
       </div>
       <div className="sectionThree">
         <h3 className="current">CURRENT CHAPTER</h3>
-        <p className="chapter"></p>
-        <button className="remove">Remove Book</button>
+        <p className="chapter">Chapter 17</p>
+        <button type="submit" className="remove">Remove Book</button>
       </div>
     </div>
   );
-}
+};
 
-export default Book
+export default Book;

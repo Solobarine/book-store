@@ -1,6 +1,7 @@
 import React, { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = () => { //eslint-disable-line
+
   return (
     <div className="navBar">
       <ul className="navLinks">
@@ -8,7 +9,7 @@ const Nav = () => {
         <h3 className="navItem"><Link to="/books">Books</Link></h3>
         <h3 className="navItem"><Link to="/categories">Categories</Link></h3>
       </ul>
-      <i className="fa-regular fa-person"></i>
+      <i className="fa-regular fa-person" />
     </div>
   );
 };

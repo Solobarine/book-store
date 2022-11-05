@@ -4,18 +4,18 @@ import Home from './components/Home';
 import Categories from './components/Categories';
 import Books from './components/Books';
 
-const App = () => {
+const App = () => { //eslint-disable-line
+
   return (
     <div className="app">
       <Nav />
       <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/books" element={ <Books /> } />
-        <Route path="/categories" element={ <Categories /> } />
+        <Route path="/" element={<Home />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
-    </div> 
+    </div>
   );
-}
+};
 
-export default App
-
+export default App;
