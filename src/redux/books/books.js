@@ -5,8 +5,8 @@ const ACTIONS = {
   REMOVE_BOOK: 'remove-book',
 }
 
-const addNewBook => (title = '', author = '') = { // eslint-disable-line
-  return ({id: Date.now(), Title: title, Author: author});
+const addNewBook => (bookTitle, bookAuthor) = { // eslint-disable-line
+  return ({id: Date.now(), Title: bookTitle, Author: bookAuthor});
 }
 
 const reducer = (books, actions) => {
