@@ -1,10 +1,11 @@
-import Redux from 'redux';
-import reducer from './books/books'; //eslint-disable-line
-import catReducer from './categories/categories';
+import { combineReducers } from 'react-redux';
 
-const rootReducer = Redux.combineReducers({
-  books: reducer,
+import catReducer from './categories/categories';
+import booksReducer from './books/Books';
+
+const rootReducer = combineReducers({
   categories: catReducer,
+  books: booksReducer,
 });
 
-const store = Redux.createStore(rootReducer); // eslint-disable-line
+export default rootReducer;

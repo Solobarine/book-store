@@ -1,33 +1,28 @@
-import { useReducer, useState } from 'react';
+const ADD_BOOK = 'book-store/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 
-const ACTIONS = {
-  ADD_BOOK: 'add-book',
-  REMOVE_BOOK: 'remove-book',
-};
+const firstState = [];
 
-const reducer = (books, actions) => { //eslint-disable-line
-  switch (actions.type) {
-    case ACTIONS.ADD_BOOK:
-      return [...books, {
-        id: Date.now(),
-        Title: actions.payload.bookTitle,
-        Author: actions.payload.bookAuthor,
-      }];
-    case ACTIONS.REMOVE_BOOK:
-      books.filter((book) => book.id !== actions.payload.id);
-      break;
+const booksReducer = (state = firstState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.payload];
+
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.payload);
+
     default:
-      return books;
+      return state;
   }
 };
 
-const [books, dispatch] = useReducer(reducer, []); //eslint-disable-line
+const addBook = () => ({
+  type: ADD_BOOK,
+});
 
-const [bookTitle, setBookTitle] = useState(''); //eslint-disable-line
+const removeBook = () => ({
+  type: REMOVE_BOOK,
+});
 
-const [bookAuthor, setBookAuthor] = useState(''); //eslint-disable-line
-
-export {
-  ACTIONS, books, dispatch, bookTitle, bookAuthor, setBookTitle, setBookAuthor,
-};
-export default reducer;
+export { addBook, removeBook };
+export default booksReducer;

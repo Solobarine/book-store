@@ -1,21 +1,20 @@
-import { useReducer } from 'react';
+const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
 
-const CAT_ACTIONS = {
-  CHECK_STATUS: 'check-status',
-};
-const initialStatus = '';
-const catReducer = (status = initialStatus, actions) => {
-  switch (actions.type) {
-    case CAT_ACTIONS.CHECK_STATUS:
-      status = 'Under Construction'; //eslint-disable-line
-      break;
+const firstState = [];
+
+const checkStatus = () => ({
+  type: CHECK_STATUS,
+});
+
+const catReducer = (state = firstState, action) => {
+  switch (action.type) {
+    case CHECK_STATUS:
+      return 'Under construction';
+
     default:
-      status = 'Unknown Action'; //eslint-disable-line
-      break;
+      return state;
   }
 };
 
-const [category, dispatch] = useReducer(catReducer, ''); // eslint-disable-line
-
-export { CAT_ACTIONS };
+export { checkStatus };
 export default catReducer;
