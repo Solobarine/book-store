@@ -1,5 +1,5 @@
 import Redux from 'redux';
-import reducer from './books/books';
+import reducer from './books/books'; //eslint-disable-line
 import catReducer from './categories/categories';
 
 const rootReducer = Redux.combineReducers({
