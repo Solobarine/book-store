@@ -5,14 +5,10 @@ const ACTIONS = {
   REMOVE_BOOK: 'remove-book',
 }
 
-const addNewBook => (bookTitle, bookAuthor) = { // eslint-disable-line
-  return ({id: Date.now(), Title: bookTitle, Author: bookAuthor});
-}
-
 const reducer = (books, actions) => {
   switch (actions.type) {
     case ACTIONS.ADD_BOOK:
-      return [...books, addNewBook(actions.payload.bookTitle, actions.payload.bookAuthor)];
+      return [...books, {id: Date.now(), Title: actions.payload.bookTitle, Author: actions.payload.bookAuthor}];
       break;
     case ACTIONS.REMOVE_BOOK:
       books.filter((book) => book.id != actions.payload.id);
