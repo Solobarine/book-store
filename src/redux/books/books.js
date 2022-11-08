@@ -8,9 +8,10 @@ const ACTIONS = {
 const reducer = (books, actions) => { //eslint-disable-line
   switch (actions.type) {
     case ACTIONS.ADD_BOOK:
-		  return [...books, { id: Date.now(),
-			  Title: actions.payload.bookTitle,
-			  Author: actions.payload.bookAuthor }]
+      return [...books, { id: Date.now(),
+        Title: actions.payload.bookTitle,
+        Author: actions.payload.bookAuthor
+      }];
     case ACTIONS.REMOVE_BOOK:
       books.filter((book) => book.id !== actions.payload.id);
       break;
@@ -25,7 +26,7 @@ const [bookTitle, setBookTitle] = useState(''); //eslint-disable-line
 
 const [bookAuthor, setBookAuthor] = useState(''); //eslint-disable-line
 
-
-export { ACTIONS, books, dispatch, bookTitle, bookAuthor, setBookTitle, setBookAuthor
+export { 
+  ACTIONS, books, dispatch, bookTitle, bookAuthor, setBookTitle, setBookAuthor
 };
 export default reducer;
