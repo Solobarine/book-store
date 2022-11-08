@@ -1,7 +1,7 @@
 import { combineReducers } from 'react-redux';
 
 import catReducer from './categories/categories';
-import booksReducer from './books/Books';
+import booksReducer from './books/books';
 
 const rootReducer = combineReducers({
   categories: catReducer,
