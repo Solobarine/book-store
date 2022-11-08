@@ -1,5 +1,5 @@
 import React from 'react';
-import { bookTitle, bookAuthor, setBookTitle, setBookAuthor } from '../redux/books/books';
+import { bookTitle, bookAuthor, setBookTitle, setBookAuthor } from '../redux/books/books'; //eslint-disable-line
 
 const AddBook = () => { //eslint-disable-line
 

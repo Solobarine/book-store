@@ -2,11 +2,11 @@ import { useReducer, useState } from 'react';
 
 const ACTIONS = {
   ADD_BOOK: 'add-book',
-  REMOVE_BOOK: 'remove-book'
+  REMOVE_BOOK: 'remove-book',
 }
 
-const addNewBook = (title, author) = {
-  return {id: Date.now(), Title: title, Author: author}
+const addNewBook => (title, author) = {
+  return ({id: Date.now(), Title: title, Author: author});
 }
 
 const reducer = (books, actions) => {
@@ -18,7 +18,7 @@ const reducer = (books, actions) => {
       books.filter((book) => book.id != actions.payload.id);
       break;
     default:
-      return books
+      return books;
       break;
   }
 };
