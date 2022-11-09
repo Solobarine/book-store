@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import { addNewBook } from '../redux/books/books';
+import {addBook} from '../redux/books/books';
 
 const AddBook = () => { //eslint-disable-line
   const [name, setName] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
+  const addNewBook = (e) => {
+    e.preventDefault();
+    dispatch(addBook({Id: Date.now(), Title: name, Author: author}))
+  }
 
   return (
     <form className="form">
@@ -19,7 +23,7 @@ const AddBook = () => { //eslint-disable-line
       placeholder="Enter Book Author"
       onChange={(e) => setAuthor(e.target.value)}/>
 
-      <button type="submit" className="submitBook" onClick={() => dispatch(addNewBook({Id: Date.now(), Title: name, Author: author}))}>Add Book</button>
+      <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
     </form>
   );
 };

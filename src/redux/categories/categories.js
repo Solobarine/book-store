@@ -1,10 +1,6 @@
-const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 const firstState = [];
-
-const checkStatus = () => ({
-  type: CHECK_STATUS,
-});
 
 const catReducer = (state = firstState, action) => {
   switch (action.type) {
@@ -15,6 +11,10 @@ const catReducer = (state = firstState, action) => {
       return state;
   }
 };
+
+const checkStatus = () => ({
+  type: CHECK_STATUS,
+});
 
 export { checkStatus };
 export default catReducer;
