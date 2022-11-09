@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
+
 const Categories = () => { //eslint-disable-line
   const showCategory = useSelector((state) => state.categories);
   const dispatch = useDispatch();
-  const handleClick =(e) => {
+  const handleClick = (e) => {
     e.preventDefault();
     dispatch(checkStatus());
   };
