@@ -14,19 +14,19 @@ const AddBook = () => { //eslint-disable-line
   return (
     <form className="form">
       <input
-        type="text" 
-        className="bookName" 
-        placeholder="Enter Book Name" 
-        onChange={(e) => setName(e.target.value)
-        } />
+        type="text"
+        className="bookName"
+        placeholder="Enter Book Name"
+        onChange={(e) => setName(e.target.value)}
+      />
 
       <input
         type="text"
         className="bookAuthor"
         placeholder="Enter Book Author"
         onChange={
-        (e) => setAuthor(e.target.value)
-        } />
+        (e) => setAuthor(e.target.value)}
+      />
 
       <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
     </form>

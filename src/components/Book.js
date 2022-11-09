@@ -4,8 +4,8 @@ import { removeBook } from '../redux/books/books';
 
 const Book = (props) => { //eslint-disable-line
   const dispatch = useDispatch();
-  const { id, Title, Author } = props.book;
-  const remove  = (e) => {
+  const { id, Title, Author } = props.book; // eslint-disable-line
+  const remove = (e) => {
     e.preventDefault();
     dispatch(removeBook(id));
   };
