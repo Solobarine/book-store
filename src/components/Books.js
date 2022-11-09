@@ -1,11 +1,17 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import Book from './Book';
 
 const Books = () => { //eslint-disable-line
+  const store = useSelector((state) => state.books);
 
   return (
     <div className="bookList">
-      <Book />
+      {
+        store.forEach(element => {
+          <Book element={element}/>
+        })
+      }
     </div>
   );
 };
