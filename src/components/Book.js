@@ -4,19 +4,19 @@ import { removeBook } from '../redux/books/books';
 
 const Book = (props) => { //eslint-disable-line
   const dispatch = useDispatch();
-  const text = props.book;
+  const { id, Title, Author } = props.book;
   const remove  = (e) => {
     e.preventDefault();
-    dispatch(removeBook(text.id));
-  }
+    dispatch(removeBook(id));
+  };
 
   return (
-    <div id={props.id} className="book">
+    <div id={id} className="book">
       <div className="sectionOne">
         <div className="bookDetails">
           <p className="bookGenre">Sci-Fi</p>
-          <h3 className="bookName">{text.Title}</h3>
-          <p className="bookAuthor">{text.Author}</p>
+          <h3 className="bookName">{Title}</h3>
+          <p className="bookAuthor">{Author}</p>
         </div>
         <ul className="buttons">
           <li className="button">Comments</li>
@@ -34,7 +34,7 @@ const Book = (props) => { //eslint-disable-line
       <div className="sectionThree">
         <h3 className="current">CURRENT CHAPTER</h3>
         <p className="chapter">Chapter 17</p>
-        <button type="submit" className="remove" onClick={ remove }>Remove Book</button>
+        <button type="submit" className="remove" onClick={remove}>Remove Book</button>
       </div>
     </div>
   );
