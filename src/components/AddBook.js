@@ -25,7 +25,8 @@ const AddBook = () => { //eslint-disable-line
         className="bookAuthor"
         placeholder="Enter Book Author"
         onChange={
-        (e) => setAuthor(e.target.value)}
+          (e) => setAuthor(e.target.value)
+        }
       />
 
       <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
