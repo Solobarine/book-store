@@ -3,10 +3,10 @@ import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => { //eslint-disable-line
   const { item_id, Title, Author, Category } = props.book; // eslint-disable-line
-  const itemId = item_id;
+  const itemId = item_id; // eslint-disable-line
 
   return (
-    <div id={itemId} className="book"> 
+    <div id={itemId} className="book">
       <div className="sectionOne">
         <div className="bookDetails">
           <p className="bookGenre">{Category}</p>

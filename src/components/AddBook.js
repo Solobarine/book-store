@@ -49,9 +49,9 @@ const AddBook = () => { //eslint-disable-line
         <option value="Fantasy">Fantasy</option>
         <option value="Mystery">Mystery</option>
         <option value="Science Fiction">Science Fiction</option>
-    </select>
-    <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
-  </form>
+      </select>
+      <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
+    </form>
   );
 };
 

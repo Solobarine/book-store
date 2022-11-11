@@ -14,13 +14,13 @@ const bookReducer = (state = [], action = {}) => {
       return state.filter((book) => book.item_id !== action.book.item_id);
     default:
       return state;
-  };
+  }
 };
 
 export const getBooks = () => async (dispatch) => {
-  const collectBooks = await fetch(`${url}/apps/${key}/books`).then((res) => res.json())
+  const collectBooks = await fetch(`${url}/apps/${key}/books`).then((res) => res.json());
   const books = [];
-  Object.keys(collectBooks).forEach((e) => books.push({ ...collectBooks[e][0], item_id: e }))
+  Object.keys(collectBooks).forEach((e) => books.push({ ...collectBooks[e][0], item_id: e }));
   dispatch({
     type: GET_BOOKS,
     payload: books,
@@ -43,7 +43,7 @@ export const addBook = (book) => async (dispatch) => {
     },
   };
 
-  await fetch(`${url}/apps/${key}/books`, options).then(res => res.json())
+  await fetch(`${url}/apps/${key}/books`, options).then((res) => res.json());
   dispatch({
     type: ADD_BOOK,
     book,

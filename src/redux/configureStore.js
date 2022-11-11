@@ -1,4 +1,4 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
 import catReducer from './categories/categories';
 import booksReducer from './books/books';
@@ -8,6 +8,6 @@ const store = configureStore({
     categories: catReducer,
     books: booksReducer,
   },
-},);
+});
 
 export default store;

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getBooks } from '../redux/books/books';
 import Book from './Book';
 
-
 const Books = () => { //eslint-disable-line
   const store = useSelector((state) => state.books);
   const dispatch = useDispatch();
