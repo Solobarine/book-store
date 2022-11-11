@@ -1,8 +1,8 @@
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const firstState = [];
+const initialState = [];
 
-const catReducer = (state = firstState, action) => {
+const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'Under construction';
@@ -17,4 +17,4 @@ const checkStatus = () => ({
 });
 
 export { checkStatus };
-export default catReducer;
+export default categoriesReducer;

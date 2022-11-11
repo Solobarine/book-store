@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+  padding: 0 0.5rem;
+}
+
+header,
+form,
+nav > ul,
+.bookStyle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0;
+}
