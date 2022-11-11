@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Book from './Book';
-import { useEffect } from 'react';
 import { getBooks } from '../redux/books/books';
+import Book from './Book';
+
 
 const Books = () => { //eslint-disable-line
   const store = useSelector((state) => state.books);
-  console.log(store)
   const dispatch = useDispatch();
 
   useEffect(() => {

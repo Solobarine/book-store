@@ -8,15 +8,15 @@ const AddBook = () => { //eslint-disable-line
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
   const book = {
-      item_id: Date.now(),
-      Title: title,
-      Author: author,
-      Category: category,
-  }
-  console.log(book)
+    item_id: Date.now(),
+    Title: title,
+    Author: author,
+    Category: category,
+  };
+
   const addNewBook = (e) => {
     e.preventDefault();
-    dispatch(addBook(book))
+    dispatch(addBook(book));
   };
 
   return (
@@ -36,22 +36,22 @@ const AddBook = () => { //eslint-disable-line
       />
 
       <select
-      name="category"
-      className="category"
-      onChange={(e) => setCategory(e.target.value)}
-    >
-      <option value="">Category</option>
-          <option value="History">History</option>
-          <option value="Horror">Horror</option>
-          <option value="Thriller">Thriller</option>
-          <option value="Religion">Religion</option>
-          <option value="Romance">Romance</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Mystery">Mystery</option>
-          <option value="Science Fiction">Science Fiction</option>
-      </select>
-      <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
-    </form>
+        name="category"
+        className="category"
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="">Category</option>
+        <option value="History">History</option>
+        <option value="Horror">Horror</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Religion">Religion</option>
+        <option value="Romance">Romance</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Science Fiction">Science Fiction</option>
+    </select>
+    <button type="submit" className="submitBook" onClick={addNewBook}>Add Book</button>
+  </form>
   );
 };
 

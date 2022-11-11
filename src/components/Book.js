@@ -2,11 +2,11 @@ import React from 'react';
 import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => { //eslint-disable-line
-  console.log(props);
   const { item_id, Title, Author, Category } = props.book; // eslint-disable-line
+  const itemId = item_id;
 
   return (
-    <div id={item_id} className="book">
+    <div id={itemId} className="book"> 
       <div className="sectionOne">
         <div className="bookDetails">
           <p className="bookGenre">{Category}</p>
