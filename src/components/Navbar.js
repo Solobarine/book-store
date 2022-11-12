@@ -6,11 +6,11 @@ const Navbar = () => (
   <header>
     <h1>Bookstore CMS</h1>
     <nav>
-      <ul>
-        <li>
+      <ul id="ul">
+        <li id="linkOne">
           <NavLink to="/">Books</NavLink>
         </li>
-        <li>
+        <li id="linkTwo">
           <NavLink to="/categories">Categories</NavLink>
         </li>
       </ul>

@@ -28,7 +28,7 @@ const Book = (props) => {
       <div className="sectionOne">
         <div className="bookDetails">
           <p className="bookGenre">{category}</p>
-          <h3 className="bookName">{title}</h3>
+          <p className="bookName">{title}</p>
           <p className="bookAuthor">{author}</p>
         </div>
         <ul className="buttons">
