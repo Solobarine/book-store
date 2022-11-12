@@ -24,12 +24,32 @@ const Book = (props) => {
   };
 
   return (
-    <li id={id} className="bookStyle">
-      <p>{title}</p>
-      <p>{author}</p>
-      <p>{category}</p>
-      <button type="button" onClick={handleRemove}>Remove</button>
-    </li>
+    <div id={id} className="book">
+      <div className="sectionOne">
+        <div className="bookDetails">
+          <p className="bookGenre">{category}</p>
+          <h3 className="bookName">{title}</h3>
+          <p className="bookAuthor">{author}</p>
+        </div>
+        <ul className="buttons">
+          <li className="button">Comments</li>
+          <li className="button">Remove</li>
+          <li className="button">Edit</li>
+        </ul>
+      </div>
+      <div className="sectionTwo">
+        <i className="fa-regular" />
+        <div className="progress">
+          <h3 className="percentage">70%</h3>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+      <div className="sectionThree">
+        <h3 className="current">CURRENT CHAPTER</h3>
+        <p className="chapter">Chapter 17</p>
+        <button type="submit" className="remove" onClick={handleRemove}>Remove Book</button>
+      </div>
+    </div>
   );
 };
 
