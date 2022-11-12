@@ -2,12 +2,12 @@ const LOAD_BOOK = 'bookstore/books/LOAD_BOOK';
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const DELETE_BOOK = 'bookstore/books/DELETE_BOOK';
 
-const initialState = [{id: 4068, title: 'hom', author: 'jan', category: 'jus'}];
+const initialState = [];
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_BOOK:
-      return [...state, action.payload];
+      return action.payload;
 
     case ADD_BOOK:
       return [...state, action.payload];
